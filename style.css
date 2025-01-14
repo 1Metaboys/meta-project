@@ -1,0 +1,205 @@
+@font-face {
+    font-family: "gothic";
+    src: url("fonts/GOTHIC.TTF");
+}
+
+@font-face {
+    font-family: "montserrat-extrabold";
+    src: url("fonts/MONTSERRAT-EXTRABOLD.TTF");
+}
+
+@font-face {
+    font-family: "montserrat-light";
+    src: url("fonts/MONTSERRAT-LIGHT.TTF");
+}
+
+html {
+    background-color: #101010;
+    color: #7d7d7d;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: auto 100%;
+    color: #ffffff;
+    text-align: center;
+    background: url('assets/cube.png') no-repeat center;
+    height: 100%;
+    background-size: cover;
+    transition: box-shadow 0.8s ease;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3rem;
+    font-weight: 100;
+    font-family: "gothic";
+}
+
+.grid-container {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    max-width: 800px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section {
+    border-radius: 8px;
+    padding: 10px;
+    transition: transform 0.4s;
+    cursor: pointer;
+    flex: 0 0 calc(25% - 20px);
+    box-sizing: border-box;
+    position: relative;
+}
+
+section:hover {
+    transform: scale(1.1);
+}
+
+section img {
+    border-radius: 50%;
+    transition: box-shadow 0.8s ease;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+section h2 {
+    margin: 10px 0 5px;
+    font-family: "montserrat-extrabold";
+}
+
+section p {
+    font-size: 0.9rem;
+    color: #a3a3a3;
+    font-family: "montserrat-light";
+}
+
+footer {
+    margin-top: 100px;
+    padding: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.advert-container {
+    font-family: "montserrat-light";
+    position: relative;
+    overflow: hidden;
+    height: 120px;
+    margin-top: -56px; 
+}
+
+footer h3 {
+    color: #ff3730;
+    font-family: "montserrat-extrabold";
+}
+
+#advert-text {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 4rem;
+    font-family: "montserrat-extrabold";
+    text-shadow: -1px 0 rgb(71, 71, 71), 0 1px rgb(71, 71, 71), 1px 0 rgb(71, 71, 71), 0 -1px rgb(71, 71, 71);
+    color: #101010;
+    animation: moveAdvert 5000s linear infinite;
+}
+
+.ad-banner {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    background: url('assets/lgt-team-background.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.ad-logo {
+    width: 80%; 
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+}
+
+.ad-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+    z-index: 2;
+}
+
+
+.ad-button img {
+    width: 50%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.ad-button:hover {
+    transform: scale(1.2);
+}
+
+
+@keyframes moveAdvert {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    section img {
+        max-width: 70px; 
+    }
+
+    .ad-banner {
+        max-width: calc(100% - 40px);
+    }
+}
