@@ -1,10 +1,3 @@
-const links = {
-    screen: "https://example.com/test1",
-    voice: "https://example.com/test2",
-    sfera: "https://example.com/test3",
-    chat: "https://example.com/test4",
-};
-
 document.querySelectorAll('section').forEach(section => {
     const image = section.querySelector("img");
 
@@ -21,6 +14,13 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 document.querySelectorAll('[data-link-name]').forEach((section) => {
+    const links = {
+        screen: "https://example.com/test1",
+        voice: "https://example.com/test2",
+        sfera: "https://example.com/test3",
+        chat: "https://example.com/test4",
+    };
+    
     const linkName = section.getAttribute('data-link-name');
     const link = links[linkName];
 
